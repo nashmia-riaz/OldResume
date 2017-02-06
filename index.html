@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nashmia Riaz</title>
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+
+<!-- fotorama.css & fotorama.js. -->
+<link  rel="stylesheet" href="css/fotorama.css"> <!-- 3 KB -->
+  </head>
+
+  <body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-default ">
+            <div class="container-fluid"><!--
+                <div class="navbar-header">
+                    <a href="index.html" class="pull-left"></a>
+                </div> -->
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="index.html" class="pull-left"><h1>Nashmia Riaz</h1></a>
+                    </div>
+
+
+                <!--This is in other pages -->
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> <!-- navbar header-->
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li id="navHomeButton" >
+                          <a href="#Home" onclick="
+                              $dc.loadHome();
+                              var home = '$dc.loadHome()';
+                              history.pushState('$dc.loadHome()',null,'#Home');
+                              "> Home</a>
+                        </li>
+                        <li id="navartworksButton">
+                          <a href="#Artworks" onclick="
+                          // (function(){
+                            $dc.loadArt('artworks');
+                              var art = '$dc.loadArt(\'artworks\')';
+                              history.pushState(art,null,'#Artworks');
+                              // });
+                              "> Artworks</a>
+                        </li>
+                        <li id="navdesignsButton">
+                          <a href="#Designs" onclick="
+                            $dc.loadArt('designs');
+                            history.pushState('$dc.loadArt(\'designs\')',null,'#Designs');
+                            "> Designs</a>
+                        </li>
+                        <li id="navBlogButton">
+                          <a href="https://nashmia-riaz.github.io/BlogNR/"> Blog</a>
+                        </li>
+                        <li id="navProjectsButton">
+                          <a href="#Projects" onclick="
+                            $dc.loadProgramming();
+                            var programming = '$dc.loadProgramming()';
+                            history.pushState(programming,'null','#Projects');
+                            "> Programming</a>
+                        </li>
+                    </ul><!-- #nav-list -->
+                </div><!-- .collapse .navbar-collapse -->
+            </div><!-- container -->
+        </nav>
+    </header>
+
+    <div id="main-content"></div>
+
+  <footer class="panel-footer">
+          <div class="container">
+            <div class='col-lg-10 col-sd-10' id="aboutMe">
+              <p >
+                Nashmia Riaz is currently studying Software Engineering at National University of Science &amp; Technology, Pakistan. During her free time, she enjoys coding, designing, and making digital paintings. She's a hard worker and a quick learner who likes taking on challenges.
+              </p>
+            </div>
+            <div id="contactMe">
+                    If you would like to contact me, click <a href="#contactMeForm"
+                    onclick="
+                    document.getElementById('contactMeForm').style.display = 'block';
+                    document.getElementById('Form').style.display = 'block';
+                    ">here</a>.
+                <div id="contactMeForm">
+                    <div id="Form">
+                        <h1>Contact Me</h1>
+                        <form action="https://formspree.io/nashmia-riaz@hotmail.com"
+                              method="POST">
+                            <input type="text" name="name" placeholder="Your name" class="input"><br/>
+                            <input type="email" name="_replyto" placeholder="Your email" class="input"><br/>
+                            <textarea type="textarea" name="message"  placeholder="Your message" class="input"  id="message" ></textarea><br/>
+                            <input type="submit" value="Send" class="btn-block" id="button">
+                        </form>
+                    </div>
+                </div>
+                </div>
+            <span class='hidden-lg hidden-sd col-xs-12 col-sm-12 text-center'><hr></span>
+            <div class='col-lg-2 col-sd-2 col-sm-12 col-xs-12' id='socialLinks'>
+                <div id="footerlink" class='col-lg-12 col-sd-12 col-sm-4 col-xs-4 col-xxs-12'><span class="glyphicon glyphicon-envelope"></span>
+                <br class='visible-sm  visible-xs'>
+                <a href="mailto:nashmia-riaz@hotmail.com" >
+                Email
+                </a></div>
+
+                <div id="footerlink" class='col-lg-12 col-sd-12 col-sm-4 col-xs-4 col-xxs-12'>
+                <span class="icon-linkedin-square"></span>
+                <br class='visible-sm  visible-xs'>
+                <a href="https://www.linkedin.com/in/nashmia-riaz-26b9b5b9"> LinkedIn</a></div>
+
+                <div id="footerlink" class='col-lg-12 col-sd-12 col-sm-4 col-xs-4 col-xxs-12'>
+                <span class="icon-github"></span>
+                <br class='visible-sm  visible-xs'>
+                <a href="https://github.com/nashmia-riaz"> Github</a></div>
+
+             </div>
+          </div>
+  </footer>
+  </body>
+
+<span id='bgfade'><a href="#header-nav" id="backtotop"><img src="images/Arrow_top.png"></a>
+            </span>
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.history.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/fotorama.js"></script>
+</html>
