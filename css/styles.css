@@ -365,7 +365,6 @@ body #profilepic{
   background-position: left top;
   transform:rotate(90deg);
   position:absolute ;
-  /*border:solid blue 2px;*/
 }
 #design2{
   background-repeat:  no-repeat;
